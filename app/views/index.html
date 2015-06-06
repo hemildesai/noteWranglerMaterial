@@ -23,12 +23,17 @@
       <div layout="row" flex>
         <md-sidenav class="md-sidenav-left md-whiteframe-z3 mainNav" md-component-id="left" layout-align="center center" layout="column">
           <h2>
-            <md-button aria-label="Menu Button" ng-href="#/notes">
+            <md-button aria-label="Notes Button" ng-href="#/notes">
               <i class="fa fa-paper-plane fa-3x"></i>
             </md-button>
           </h2>
+          <h2>
+            <md-button aria-label="Users Button" ng-href="#/users">
+              <i class="fa fa-users fa-3x"></i>
+            </md-button>
+          </h2>
         </md-sidenav>
-        <md-content ng-view layout-padding layout-fill flex></md-content>
+        <md-content ng-view layout-padding layout-fill layout-align="center"></md-content>
       </div>
 
 
@@ -50,8 +55,11 @@
     <script src="assets/javascript/controllers/noteShowController.js"></script>
     <script src="assets/javascript/controllers/noteEditController.js"></script>
     <script src="assets/javascript/controllers/noteCreateController.js"></script>
+    <script src="assets/javascript/controllers/userIndexController.js"></script>
+    <script src="assets/javascript/controllers/userShowController.js"></script>
 
     <!-- services -->
     <script src="assets/javascript/services/note.js"></script>
+    <script src="assets/javascript/services/user.js"></script>
     <!-- directives -->
 </html>

@@ -1,0 +1,17 @@
+<h1>Users</h1>
+<div layout="row" layout-sm="column" layout-margin layout-fill layout-padding layout-wrap layout-align="center">
+  <md-card ng-repeat="user in users" flex="30" class="md-whiteframe-z5 note-card">
+    <md-card-content>
+      <h2 class="md-title"><a ng-href="#/users/{{user.id}}">{{user.name}}</a></h2>
+      <em>{{user.username}}
+          <br>{{user.twitter_handle}}
+          <br>{{user.site}}
+         </em>
+      <h3>{{user.email}}</h3>
+
+      <p>
+        {{user.bio}}
+      </p>
+    </md-card-content>
+  </md-card>
+</div>

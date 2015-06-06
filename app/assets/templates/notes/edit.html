@@ -1,1 +1,18 @@
 <h1>Notes Edit</h1>
+<md-content md-theme="docs-dark" layout-padding layout="column" layout-sm="column">
+  <md-input-container flex>
+    <label>Title</label>
+    <input type="text" id="title" name="title" ng-model="note.title"/>
+  </md-input-container>
+  <md-input-container flex>
+    <label>Description</label>
+    <input type="text" id="description" name="description" ng-model="note.description"/>
+  </md-input-container>
+  <md-input-container flex>
+    <label>Content</label>
+    <textarea type="text" id="content" name="content" ng-model="note.content"/>
+  </md-input-container>
+  <md-button class="md-primary" ng-click="saveNote(note)" aria-label="submit" ng-disabled="canSubmit">
+    <i class="fa fa-check fa-3x"></i>
+  </md-button>
+</md-content>
