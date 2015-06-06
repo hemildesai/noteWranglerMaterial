@@ -1,0 +1,10 @@
+<h1>Notes Index</h1>
+
+<div layout="row" layout-margin layout-fill layout-padding layout-wrap layout-align="center">
+  <md-card ng-repeat="note in notes" flex="30" class="md-whiteframe-z5 note-card">
+    <md-card-content>
+      <h2 class="md-title"><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
+      <p>{{note.description}}</p>
+    </md-card-content>
+  </md-card>
+</div>

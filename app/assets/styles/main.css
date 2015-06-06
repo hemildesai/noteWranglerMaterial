@@ -281,4 +281,15 @@ textarea {
 
 h1 {
   text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.note-card, .note-card a {
+  background-color: #80d8ff !important;
+  color: #01579b;
+}
+
+.mainNav {
+  background-color: #00e5ff;
 }

@@ -8,14 +8,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assets/styles/main.css">
         <link rel="stylesheet" href="assets/styles/normalize.css">
     </head>
-    <body>
+    <body ng-controller="MainController">
 
-      <md-toolbar>
-        <h1>Note Wrangler Material</h1>
+      <md-toolbar layout="row" >
+        <md-button ng-click="toggleSideNav()" aria-label="Menu Button">
+          <i class="fa fa-bars fa-3x"></i>
+        </md-button>
+        <h1 flex class="md-heading">Note Wrangler</h1>
       </md-toolbar>
+      <div layout="row" flex>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z3 mainNav" md-component-id="left" layout-align="center center" layout="column">
+          <h2>
+            <md-button aria-label="Menu Button" ng-href="#/notes">
+              <i class="fa fa-paper-plane fa-3x"></i>
+            </md-button>
+          </h2>
+        </md-sidenav>
+        <md-content ng-view layout-padding layout-fill flex></md-content>
+      </div>
 
 
     </body>
@@ -26,5 +40,18 @@
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
+
+    <!-- app -->
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/routes.js"></script>
+
+    <!-- controllers -->
+    <script src="assets/javascript/controllers/noteIndexController.js"></script>
+    <script src="assets/javascript/controllers/noteShowController.js"></script>
+    <script src="assets/javascript/controllers/noteEditController.js"></script>
+    <script src="assets/javascript/controllers/noteCreateController.js"></script>
+
+    <!-- services -->
+    <script src="assets/javascript/services/note.js"></script>
+    <!-- directives -->
 </html>
