@@ -1,0 +1,10 @@
+<md-list layout="row" layout-align="center">
+  <md-list-item ng-repeat="c in cs">
+    <md-button href="" class="md-list-item-text md-primary md-raised"
+      ng-click="toggleCategory(c)"
+      ng-class="{'md-warn': isActive(c)}"
+      >
+        {{c.name}}
+    </md-button>
+  </md-list-item>
+</md-list>

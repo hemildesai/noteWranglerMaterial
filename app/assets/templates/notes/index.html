@@ -1,10 +1,22 @@
+
 <md-button ng-href="#/notes/new" aria-label="new-note" flex offset="66"><i class="fa fa-plus fa-3x"></i></md-button>
+
+<md-content md-theme="docs-dark" layout-padding layout="row" layout-align="center" class="searchBar">
+  <md-input-container flex>
+    <label>Search</label>
+    <input type="text" ng-model="search.input.$"/>
+  </md-input-container>
+</md-content>
+
 <h1>Notes </h1>
-<nw-category-select ng-model="search.category"></nw-category-select>
+<nw-category-selector ng-model="search.category"></nw-category-selector>
+
 <div layout="row" layout-sm="column" layout-margin layout-fill layout-padding layout-wrap layout-align="center">
-  <md-card ng-repeat="note in notes" flex="30" class="md-whiteframe-z5 note-card">
+
+  <md-card ng-repeat="note in notes | categoryFilter:search.category | filter:search.input" flex="30" class="md-whiteframe-z5 note-card">
     <md-card-content>
-      <h2 class="md-title"><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
+      <h2 class="md-title"><a ng-href="#/notes/{{note.id}}">{{note.title}}</a>
+      </h2>
       <p>{{note.description}}</p>
       <em>{{note.category.name}}</em>
     </md-card-content>

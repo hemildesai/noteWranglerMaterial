@@ -297,3 +297,9 @@ h1 {
 .radioItem {
   color: #ffffff;
 }
+
+.searchBar {
+  position: relative;
+  margin: 0 25%;
+  border-radius: 25px;
+}

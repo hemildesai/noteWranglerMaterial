@@ -16,7 +16,7 @@
               .then(function () {
                 $log.debug("toggle is done");
               });
-          },300);
+          },10);
       return debounceFn;
     };
   });
