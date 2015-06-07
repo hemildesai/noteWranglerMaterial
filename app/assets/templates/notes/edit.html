@@ -1,16 +1,36 @@
 <h1>Notes Edit</h1>
-<md-content md-theme="docs-dark" layout-padding layout="column" layout-sm="column">
+<md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
   <md-input-container flex>
-    <label>Title</label>
+    <em class="radioItem">Title</em>
     <input type="text" id="title" name="title" ng-model="note.title"/>
   </md-input-container>
   <md-input-container flex>
-    <label>Description</label>
+    <em class="radioItem">Description </em>
     <input type="text" id="description" name="description" ng-model="note.description"/>
   </md-input-container>
   <md-input-container flex>
-    <label>Content</label>
+    <em class="radioItem">Content </em>
     <textarea type="text" id="content" name="content" ng-model="note.content"/>
+  </md-input-container>
+  <md-input-container flex>
+    <em class="radioItem">Category</em>
+    <md-radio-group class="md-primary" ng-model="note.categoryId">
+          <md-radio-button ng-repeat="c in categories"
+                           ng-value="c.id"
+                           class="radioItem">
+              {{c.name}}
+          </md-radio-button>
+    </md-radio-group>
+  </md-input-container>
+  <md-input-container flex>
+    <em class="radioItem">User</em>
+    <md-radio-group class="md-primary" ng-model="note.userId">
+          <md-radio-button ng-repeat="u in users"
+                           ng-value="u.id"
+                           class="radioItem">
+              {{u.name}}
+          </md-radio-button>
+    </md-radio-group>
   </md-input-container>
   <md-button class="md-primary" ng-click="saveNote(note)" aria-label="submit" ng-disabled="canSubmit">
     <i class="fa fa-check fa-3x"></i>

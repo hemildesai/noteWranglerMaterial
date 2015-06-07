@@ -286,10 +286,14 @@ h1 {
 }
 
 .note-card, .note-card a {
-  background-color: #80d8ff !important;
-  color: #01579b;
+  background-color: #006064 !important;
+  color: #84ffff;
 }
 
 .mainNav {
-  background-color: #00e5ff
+  background-color: #00bfa5
+}
+
+.radioItem {
+  color: #ffffff;
 }

@@ -2,7 +2,7 @@
   angular.module('NoteWrangler', ['ngMaterial', 'ngRoute', 'ngResource'])
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-    .primaryPalette('light-blue')
+    .primaryPalette('teal')
     .accentPalette('light-green');
   })
   .controller('MainController', function($scope, $timeout, $mdSidenav, $mdUtil, $log) {
